@@ -23,13 +23,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
+    /** 初始化一个XMNTabbedView */
     XMNTabbedView *tabbedView = [[XMNTabbedView alloc] initWithFrame:CGRectMake(0, 120, 280, 0)];
+    /** 设置对齐方式 */
     tabbedView.alignment = XMNTabbedViewAlignmentLeft;
     tabbedView.backgroundColor = [UIColor greenColor];
+    /** !!!重要  设置tabbedView的最大宽度 */
     tabbedView.preferIntrinsicWidth = 280.f;
     
+    
+    /** 初始化tabbed */
     NSArray *texts = @[ @"php",@"python using mysql to store message 1 ",@"python using mysql to store message python using mysql to store message 2 ",@"python using mysql to store message\npython using mysql to store message\npython using mysql to store message 3", @"mysql",@"python", @"mysql", @"flask", @"django", @"bottle", @"webpy"];
-
     [texts enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
        
         XMNTabbed *tabbed = [XMNTabbed tabbedWithTitle:obj];
@@ -40,6 +45,7 @@
         [tabbedView addTabbed:tabbed];
     }];
     
+    /** 添加tabbedView */
     [self.view addSubview:self.tabbedView = tabbedView];
     NSLog(@"this is tabbed :%@",NSStringFromCGRect(self.tabbedView.frame));
 }
