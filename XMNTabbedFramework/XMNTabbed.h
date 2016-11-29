@@ -40,8 +40,22 @@
 
 
 - (instancetype __nonnull)init NS_UNAVAILABLE;
+
+/**
+ 推荐初始化方法
+
+ @param title 显示标题
+ @return 初始化实例
+ */
 - (instancetype __nonnull)initWithTitle:(NSString * __nonnull)title NS_DESIGNATED_INITIALIZER;
 
+
+/**
+ Class 初始化方法
+
+ @param title 显示标题
+ @return 实例
+ */
 + (instancetype __nonnull)tabbedWithTitle:(NSString * __nonnull)title;
 
 @end

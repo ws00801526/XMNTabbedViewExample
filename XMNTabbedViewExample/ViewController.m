@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     XMNTabbedView *tabbedView = [[XMNTabbedView alloc] initWithFrame:CGRectMake(0, 120, 280, 0)];
-    tabbedView.alignment = XMNTabbedViewAlignmentRight;
+    tabbedView.alignment = XMNTabbedViewAlignmentLeft;
     tabbedView.backgroundColor = [UIColor greenColor];
     tabbedView.preferIntrinsicWidth = 280.f;
     
@@ -42,7 +42,6 @@
     
     [self.view addSubview:self.tabbedView = tabbedView];
     NSLog(@"this is tabbed :%@",NSStringFromCGRect(self.tabbedView.frame));
-
 }
 
 
@@ -56,7 +55,6 @@
     XMNTabbed *tabbed = [XMNTabbed tabbedWithTitle:@"Add Tabbed Again"];
     tabbed.titleFont = [UIFont systemFontOfSize:10 + random() % 5];
     [self.tabbedView addTabbed:tabbed];
-    
 }
 
 - (IBAction)handleRemoveTabbed:(UIButton *)sender {
