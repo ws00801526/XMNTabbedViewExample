@@ -19,29 +19,28 @@ typedef NS_ENUM(NSUInteger, XMNTabbedViewAlignment) {
     XMNTabbedViewAlignmentRight
 };
 
+IB_DESIGNABLE
 @class XMNTabbed;
 @interface XMNTabbedView : UIView
 
 /** 行间距  默认8.f */
-@property (assign, nonatomic) CGFloat lineSpace;
+@property (assign, nonatomic) IBInspectable CGFloat lineSpace;
 
 /** 列间距  默认4.f */
-@property (assign, nonatomic) CGFloat rowSpace;
+@property (assign, nonatomic) IBInspectable CGFloat rowSpace;
 
 /** 内容间距  默认UIEdgeInsetMake(8,8,8,8) */
-@property (assign, nonatomic) UIEdgeInsets contentInset;
+@property (assign, nonatomic) IBInspectable UIEdgeInsets contentInset;
 /** 对齐方式  默认XMNTabbedViewAlignmentLeft */
 @property (assign, nonatomic) XMNTabbedViewAlignment alignment;
 /** tabbedView 的最大宽度 默认为bounds.size.width */
-@property (assign, nonatomic) CGFloat preferIntrinsicWidth;
+@property (assign, nonatomic) IBInspectable CGFloat preferIntrinsicWidth;
 
 /** 当前已经添加的tabbeds */
 @property (strong, nonatomic, readonly, nullable) NSMutableArray<XMNTabbed *> *tabbeds;
 
 /** 选择某个tabbed的时候 回调 */
 @property (copy, nonatomic, nullable)   void(^selectedTabbedBlock)(XMNTabbed * _Nonnull tabbed);
-
-
 
 /**
  添加一个tabbed

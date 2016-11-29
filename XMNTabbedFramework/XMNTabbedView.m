@@ -27,11 +27,21 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        self.rowSpace = 4.f;
-        self.lineSpace = 8.f;
-        self.contentInset = UIEdgeInsetsMake(8, 8, 8, 8);
+        [self setup];
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    
+    [super awakeFromNib];
+}
+
+- (void)setup {
+    
+    self.rowSpace = 4.f;
+    self.lineSpace = 8.f;
+    self.contentInset = UIEdgeInsetsMake(8, 8, 8, 8);
 }
 
 #pragma mark - Override Method
